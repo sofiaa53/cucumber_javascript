@@ -1,24 +1,39 @@
 const element = require("../locator.json")
 
 class NewCategoryPage {
-    async btnAdd() {
-        return $(element.categoryPage.btnAdd)
+    get nama() {
+        return $('#nama')
     }
 
-    async nama() {
-        return $(element.addNewCategoryPage.nama)
+    get deskripsi(){
+        return $('#deskripsi')
     }
 
-    async deskripsi(){
-        return $(element.addNewCategoryPage.deskripsi)
-    }
-
-    async btnSave() {
-        return $(element.addNewCategoryPage.btnSave)
+    get btnSave() {
+        return $('button[class=\'chakra-button css-l5lnz6\']')
     }
 
     async alertEmptyField() {
-        return $(element.addNewCategoryPage.alertEmptyField)
+        return $('div[role=\'alert\']')
+    }
+
+    async success() {
+        return $('li[class=\'chakra-toast\'] div[class=\'chakra-alert__desc css-zycdy9\']')
+    }
+
+    async addNewCategory(cat_name, cat_desc) {
+        await this.nama.setValue(cat_name)
+        await this.deskripsi.setValue(cat_desc)
+        await this.btnSave.click()
+    }
+
+    async addCategoryOnly(cat_desc2) {
+        await this.deskripsi.setValue(cat_desc2)
+        await this.btnSave.click()
+    }
+
+    open() {
+        return super.open('/categories/create');
     }
 }
 

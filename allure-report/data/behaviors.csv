@@ -1,4 +1,5 @@
 "Epic","Feature","Story","FAILED","BROKEN","PASSED","SKIPPED","UNKNOWN"
-"","Add New Category: User successfully add new category","","0","0","8","0","0"
+"","Add New Category: User failed add new category","","0","0","9","0","0"
 "","Login feature: User login with invalid credential","","0","0","6","0","0"
+"","Add New Category: User successfully add new category","","0","0","12","0","0"
 "","Login feature: User login with valid credential","","0","0","4","0","0"

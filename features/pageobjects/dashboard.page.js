@@ -5,16 +5,48 @@ class DashboardPage {
         return $(element.dashboardPage.header)
     }
 
-    async btnCategory(){
+    get btnCategory(){
         return $(element.dashboardPage.btnCategory)
     }
 
-    async btnProduct() {
+    get btnProduct() {
         return $(element.dashboardPage.btnProduct)
     }
 
-    async btnUser() {
+    get btnProfile() {
+        return $(element.dashboardPage.btnProfile)
+    }
+
+    get btnLogout() {
+        return $(element.dashboardPage.btnLogout)
+    }
+
+    get btnUser() {
         return $(element.dashboardPage.btnUser)
+    }
+
+    async clickbtnCategory(){
+        await this.btnCategory.click()
+    }
+
+    async clickbtnUser(){
+        await this.btnUser.click()
+    }
+
+    async clickbtnProduct(){
+        await this.btnProduct.click()
+    }
+
+    async clickbtnProfile(){
+        await this.btnProfile.click()
+    }
+
+    async clickbtnLogout(){
+        await this.btnLogout.click()
+    }
+
+    open() {
+        return super.open('/dashboard');
     }
 }
 

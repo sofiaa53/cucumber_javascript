@@ -25,7 +25,7 @@ class LoginPage extends Page {
     }
 
     async loginSuccess() {
-        await this.inputEmail.setValue("testing@gmail.com");
+        await this.inputEmail.setValue("sofiaa53@gmail.com");
         await this.inputPassword.setValue("Bandung5300");
         await this.btnSubmit.click();
     }

@@ -19,5 +19,5 @@ Feature: Login feature
     Then alert message displayed <alertMessage>
     Examples:
       | invalidEmail    | invalidPassword | alertMessage                       |
-      | samplexx@ex.xx  | 123adsfadf@!    | must be a valid email              |
-      | samplexx@ex.com | 123adsfa111     | Kredensial yang Anda berikan salah |
+      | tess            | 123adsfadf@!    | must be a valid email              |
+      | tesss@gmail.com | 123adsfa111     | Kredensial yang Anda berikan salah |
